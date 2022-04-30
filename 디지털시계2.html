@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>digital clock</title>
+		<style>
+		 td { border: 5px dotted purple; background-color: pink;}
+		 
+		 #hour{ font-size: 90px; font-weight:900;}
+		 #min{ font-size: 90px; font-weight:900;}
+		 #sec{ font-size: 90px; font-weight:900;}
+		</style>
+	</head>
+	<body>
+	
+	<table>
+	
+	<tr>
+	<td id='hour'> 시 </td> <td id='min'> 분 </td> <td id='sec'> 초 </td>
+	</tr>
+	
+	</table>
+	
+	
+	<script>
+	timer();
+	setInterval(timer,1000);
+	function timer() {
+	const d = new Date();
+	let hour = d.getHours();
+	let minutes = d.getMinutes();
+	let seconds = d.getSeconds();
+	
+	document.getElementById("hour").innerHTML = hour+"시";
+	document.getElementById("min").innerHTML = minutes+'분';
+	document.getElementById("sec").innerHTML = seconds+'초';
+	}
+	</script>
+	</body>
+</html>

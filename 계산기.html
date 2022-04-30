@@ -1,0 +1,58 @@
+<html>
+   <head>
+   <title> 계산기 </title>
+   </head>
+   
+    <script>
+   function put(char) {
+		var a = document.getElementById('result');
+        a.value += char;
+		}  
+   function calculate() {
+						var res = document.getElementById('result');
+						var r = eval(res.value);
+						document.getElementById('result2').value = r;
+						}
+						
+	function clearNum() { document.getElementById('result').value = "";
+						document.getElementById('result2').value = "";}
+		
+						
+   </script>
+   <body>
+   <table border="1" width="300px" height="300px" align="center" name="mytable">
+   
+   <tr>
+   <td colspan="4" width="50px"> <input type="text" id="result"> </td> 
+   </tr>
+   <tr>
+   <td colspan="4" width="50px"> <input type="text" id="result2"> </td> 
+   </tr>
+   </tr>
+   <tr>
+   <td colspan="3" align="center" onclick="clearNum()"> AC </td> <td align="center" onclick="put('/')"> / </td>
+   </tr>
+   <tr>
+   <td align="center" onclick="put(7)" >  7 </td> <td align="center" onclick="put(8)"> 8 </button> </td>
+   <td align="center" onclick="put(9)"> 9 </td> 
+   <td align="center" onclick="put('*')"> *  </td>
+   </tr>
+   <tr>
+   <td align="center" onclick="put(4)"> 4 </td> <td align="center" onclick="put(5)"> 5 </td>
+   <td align="center" onclick="put(6)"> 6 </td> 
+   <td align="center" onclick="put('-')">  -  </td>
+   </tr>
+   <tr>
+   <td align="center" onclick="put(1)"> 1 </button> </td> <td align="center" onclick="put(2)"> 2 </td> 
+   <td align="center" onclick="put(3)"> 3 </button> </td> 
+   <td align="center" onclick="put('+')"> + </td>
+   </tr>
+   <tr>
+   <td colspan="2" align="center" onclick="put(0)"> 0 </td> <td align="center"> . </td> 
+   <td align="center" onclick="calculate()"> = </td> 
+   </tr>
+
+  
+	</table>
+	</body>
+	</html>
